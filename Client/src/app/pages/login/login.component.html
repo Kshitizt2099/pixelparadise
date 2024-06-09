@@ -1,0 +1,47 @@
+<div class="left"  >
+   
+  
+   <video loop muted autoplay="autoplay">
+    <source src="http://localhost:4500/uploads/intro.mp4">
+     
+   </video>
+  
+  
+      
+
+
+</div>
+
+
+
+
+
+<div class= "right">
+    
+    <div class="login">
+        <div class="title">
+            <h1>Pixel Paradise</h1>
+         </div>
+         <label>UserName</label>
+    <input type="text" [(ngModel)]="name" placeholder="UserName">
+    
+    <label>Email</label>
+    <input type="text" [(ngModel)]="email" placeholder="Email">
+    
+    <label>Fs_Id</label>
+    <input type="text" [(ngModel)]="id" placeholder="Fs_Id">
+    
+    <label>Password</label>
+    <input type="password" [(ngModel)]="password" placeholder="Password">
+ 
+        <button (click)="login()" class="bg-purple-500 "  >Login</button>
+        <a href="/signIn"><h4 class="text-green-400">Create Account</h4></a>
+        <a href="/create"><button>Upload</button></a>
+    
+ 
+    
+    </div>
+   
+
+
+</div>

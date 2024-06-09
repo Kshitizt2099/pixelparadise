@@ -1,0 +1,27 @@
+<p>uploadform works!</p><form (ngSubmit)="onSubmit()">
+    <label for="title">Title:</label>
+    <input type="text" id="title" [(ngModel)]="title" name="title" required maxlength="20">
+
+    <label for="description">Description:</label>
+    <textarea id="description" [(ngModel)]="description" name="description" required maxlength="700"></textarea>
+
+    <label for="id">id</label>
+    <input type="number" id="id" [(ngModel)]="id" name="id" required>
+
+    <label for="price">Price:</label>
+    <input type="number" id="price" [(ngModel)]="price" name="price" required>
+
+    <label for="creators">Creators:</label>
+    <input type="text" id="creators" [(ngModel)]="creators" name="creators" required maxlength="20">
+
+    <label for="poster">Poster:</label>
+    <input type="file" id="poster" (change)="uploadposter($event)" name="poster" accept="image/*" required>
+
+    <label for="video">Video:</label>
+    <input type="file" id="video" (change)="uploadvideo($event)" name="video" accept="video/*" required>
+
+    <label for="awards">Awards:</label>
+    <input type="text"  [(ngModel)]="Awards"  name="Awards" required>
+
+    <button type="submit">Upload</button>
+</form>

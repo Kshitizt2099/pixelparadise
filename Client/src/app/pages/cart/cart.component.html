@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+   
+    <div *ngIf="cart.length === 0">Your cart is empty</div>
+    <div *ngFor="let item of cart" class="cart-item">
+      <strong>{{ item.title }}</strong> - ₹{{ item.price }}
+
+      <div class="flex flex-row ml-[41%] mt-2 ">
+        <button class="rounded-xl bg-green-300 w-32" (click)="inc(item.cart_id)">inc</button>
+        {{item.qty}}
+        <button class="rounded-xl bg-red-300 w-32" (click)="dec(item.cart_id,item.qty)">dec</button>
+      </div>
+    </div>
+
+
+    <div class="flex flex-col">
+        
+      Total:₹{{total}}
+      <button class="w-32 bg-orange-400 rounded-full ml-[710px] text-white p-3" (click)="checkout()">CheckOut</button>
+    
+    </div>
+  </div>

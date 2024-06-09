@@ -1,0 +1,13 @@
+
+<app-navbar></app-navbar>
+<div class="flex flex-row flex-wrap align-middle justify-center mt-6">
+   <div class="h-[300px] w-[300px] m-3"  *ngFor="let product of products">
+      <img src={{product.poster}} class="h-[100%] w-[100%] rounded-xl cursor-pointer"  (click)="details(product.p_id)">   
+       
+     
+     </div>
+
+</div>
+
+
+
